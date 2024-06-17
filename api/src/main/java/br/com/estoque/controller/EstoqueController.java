@@ -41,7 +41,7 @@ public class EstoqueController {
         }
     }
 
-    @GetMapping("/")
+    @GetMapping
     public ResponseEntity<List<Estoque>> getAllEstoques() {
         List<Estoque> estoques = estoqueService.listarEstoques();
         return ResponseEntity.ok(estoques);
