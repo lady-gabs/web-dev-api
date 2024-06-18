@@ -29,8 +29,7 @@ public class SecurityConfigurations {
                         // Autoriza todas as requisições POST
                         .requestMatchers(HttpMethod.POST, "/auth/login").permitAll()
                         .requestMatchers(HttpMethod.POST, "/auth/register").permitAll()
-                        // Bloqueia o endpoint "/produto" no verbo GET. Libera apenas para ADMINs
-                        .requestMatchers(HttpMethod.GET, "/produto").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.GET, "/produto").permitAll()
                         .anyRequest().authenticated()
                 )
                 .addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class)
