@@ -73,6 +73,10 @@ public class Produto {
         this.estoque = estoque;
     }
 
+    public Long getEstoqueId(){
+        return estoque.getId();
+    }
+
     public Produto orElseThrow(Object object) {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'orElseThrow'");

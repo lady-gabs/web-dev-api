@@ -124,7 +124,7 @@ public class AuthenticationController {
         }
     }
 
-    @GetMapping
+    @GetMapping("/usuarios")
     public ResponseEntity<List<Usuario>> getAllUsers() {
         List<Usuario> usuarios = authorizationService.getAllUsers();
         return ResponseEntity.ok(usuarios);
